@@ -1,0 +1,728 @@
+body{
+    margin:0;
+    font-family: sans-serif;
+    background-color: #DEDEDE;
+}
+
+/* Stile del div centrale */
+.container_mid {
+    display: flex; /* Aggiunto display: flex; */
+    flex-direction: column; /* Orienta il contenuto verticalmente */
+    background-color: #ECECEC; /* Colore del div centrale */
+    
+    max-width: 700px; /* Larghezza massima del div centrale */
+    min-width: 500px;
+    padding: 40px; /* Aggiunge spazio interno al div centrale */
+    border-radius: 10px; /* Aggiunge un bordo arrotondato al div centrale */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra leggera */
+    margin-bottom: 50px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.container_mid_create {
+    display: flex; /* Aggiunto display: flex; */
+    flex-direction: column; /* Orienta il contenuto verticalmente */
+    background-color: #ECECEC; /* Colore del div centrale */
+    
+    max-width: 1000px; /* Larghezza massima del div centrale */
+    min-width: 500px;
+    padding: 40px; /* Aggiunge spazio interno al div centrale */
+    border-radius: 10px; /* Aggiunge un bordo arrotondato al div centrale */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra leggera */
+    margin-bottom: 50px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.additional_inputs{
+    display: flex; /* Aggiunto display: flex; */
+    flex-direction: column;
+}
+.container_all{
+    display: flex;
+}
+
+
+.comment {
+    grid-column: 1; /* Occupa tutta la larghezza della colonna */
+    grid-row: 3; /* Si trova nella terza riga */
+}
+
+.container_icons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.comment{
+    max-width: 43px;
+    max-height: 43px;
+    margin: 1rem;
+}
+/* Importa il font Inter (assicurati di avere il link corretto al font) */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.container_categorie{
+    margin: 2.5rem;
+    margin-left: 5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem;
+    gap: 2rem;
+     
+    background-color: #F9F9F9;
+    width: 16.5%;
+    height: fit-content;
+
+    position: relative;
+    top: 100px;
+  
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 10px rgba(72, 72, 72, 0.13);
+}
+.input_comment{
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-styled {
+    background-color: transparent; /* Sfondo trasparente */
+    border: none; /* Nessun bordo */
+    border-bottom: 1px solid #ccc; /* Bordo inferiore sottile */
+    color: #333; /* Colore del testo */
+    font-size: 16px; /* Dimensione del testo */
+    
+    width: 100%; /* Larghezza completa */
+    outline: none; /* Nessun contorno di focus */
+    transition: border-color 0.3s ease; /* Transizione fluida */
+}
+
+.input-styled:focus {
+    border-bottom: 1px solid #1DA1F2; /* Bordo inferiore celeste al focus */
+}
+
+.input-styled::-webkit-input-placeholder {
+    color: #aaa; /* Colore del placeholder */
+}
+.form_comment{
+    display: flex;
+    gap: 2rem;
+    margin-left: 5px;
+}
+.testo_commento{
+    width: 75%;
+}
+
+
+
+.container_comment{
+    border-radius: 10px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F9F9F9; /* Imposta il colore di sfondo del container dei commenti */
+    z-index: 1; /* Assicura che il container dei commenti si sovrapponga al container post */
+    display: none; 
+    padding: 2rem;
+    box-shadow: 0px 0px 10px 10px rgba(72, 72, 72, 0.13);
+}
+
+.container_comment {
+    max-height: 300px; /* Altezza massima */
+    overflow-y: auto; /* Scorrimento verticale */
+    overflow-x: hidden; /* Nessuno scorrimento orizzontale */
+}
+
+.container_comment::-webkit-scrollbar {
+    width: 8px; /* Larghezza della scrollbar */
+}
+
+.container_comment::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Colore del tracciato della scrollbar */
+}
+
+.container_comment::-webkit-scrollbar-thumb {
+    background: #888; /* Colore del pollice della scrollbar */
+}
+
+.container_comment::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Colore del pollice quando il mouse è sopra */
+}
+
+.info_comments{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.comment{
+    cursor: pointer;
+}
+
+.elenco_categorie{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/*stile post eventi */
+.container_post{
+    background-color: #F9F9F9;
+    display:flex;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    width: 100%; 
+    height: 300px;
+    max-width: 1600px; 
+    min-width: 500px;
+    box-shadow: 0px 0px 10px 10px rgba(72, 72, 72, 0.13);
+}
+.text{
+    font-size: 14px;
+    border-radius: 6px;
+    line-height: 1.5;
+    padding: 5px 10px;
+    transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
+    border: 2px solid #dee1e2;
+    color: rgb(14, 14, 16);
+    background: #dee1e2;
+    display: block;
+    height: 36px;
+    width: 100%;
+}
+.white{
+    background: #f8f8f8;
+}
+.container_container_date{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.container_date{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.data_container{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.data_row{
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    justify-content: center;
+    align-items: center;
+}
+.input_date{
+    background-color: #f8f8f8;
+    padding: 3px;
+    font-family: "Roboto Mono",monospace;
+    color: #000000;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+
+}
+::-webkit-calendar-picker-indicator{
+    background-color: #ffffff;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.input_bello{
+    width: 100%;
+}
+
+.text :hover {
+    border-color: #ccc;
+}
+.text :focus{
+    border-color: #9147ff;
+    background: #fff;
+}
+.container_create_post{
+    background-color: #F9F9F9;
+    display:flex;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    width: 100%; 
+    height: 340px;
+    max-width: 1600px; 
+    min-width: 500px;
+    box-shadow: 0px 0px 10px 10px rgba(72, 72, 72, 0.13);
+}
+
+.all_comments{
+    display: flex;
+    flex-direction: column;
+    gap:0.9rem;
+}
+.single_comment{
+    display: flex;
+    flex-direction: row;
+}
+.container_info_post, .container_error_cat{
+    margin: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    font-family: 'Inter', sans-serif;
+    flex: 1;
+    padding-right: 20px;
+    padding-left: 20px;
+    overflow: auto;   
+}
+
+
+.container_arrow :hover{
+    cursor: pointer;
+}
+.container_error_cat{
+    justify-content: center;
+}
+.container_img{
+    border-radius: 10px 0px 0px 10px;
+    width: 50%; /* Larghezza del div */
+    height: 100%; /* Altezza del div */
+    overflow: hidden; /* Nasconde eventuali parti dell'immagine che eccedono le dimensioni del div */
+    display:flex;
+    justify-content: center;
+    box-shadow: 5px 0px 10px 5px rgba(0,0,0,0.13);
+}
+
+.event_img{
+    flex: 1;
+    object-fit: cover;
+    height: 100%;
+}
+
+.nome{
+    font-family: 'Inter', sans-serif;
+    font-size:1.5em;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.quando{
+    font-weight: lighter;
+    font-size:10pt;
+    color: grey;
+}
+/*sfondo */
+.container_bg{
+    display: flex;
+    margin:0;
+    padding: 0;
+    background-color: #DEDEDE;
+
+    gap:.7rem;
+    justify-content: flex-start;
+}
+
+.container_bg_create{
+    display: flex;
+    margin:0;
+    padding: 0;
+    background-color: #DEDEDE;
+
+    gap:.7rem;
+    justify-content: center;
+}
+
+.header{ 
+    padding: 1rem;
+    justify-content: center;
+    
+	font-family: sans-serif;
+	height: 3.2rem; /*spessore header*/
+	display:flex;
+    width: 100%;
+	align-items: center;
+    background-color: #F9F9F9;
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    gap: 12rem;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* ombra */
+}
+
+.header h1 {
+	font-size:1.6em;
+	font-family:'Concert one';
+	font-weight: 500;
+	cursor: pointer;
+}
+
+/* Applica il font Inter al testo e rimuove lo stile del link */
+a {
+    text-decoration: none; /* Rimuove la sottolineatura */
+    color: inherit; /* Usa il colore del testo ereditato */
+    font-family: 'Inter', sans-serif; /* Applica il font Inter */
+}
+
+.titolo .logg{
+    display: flex;
+    position: relative;
+    font-weight: bold;
+    font-size: 1.2em;
+    left: 0;
+}
+
+.logg{
+    margin-right: 3rem;
+}
+
+.titolo, .logo:hover {
+    cursor: pointer;
+}
+
+.logo img {
+    height: 45px; /* Altezza del logo */
+    margin-right: 2rem;
+}
+
+.create{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* INPUT RICERCA HEADER */
+
+
+.container-4{
+    overflow: hidden;
+    width: 400px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.container-4 input#search{
+    width: 400px;
+    height: 45px;
+    background: #F1F0F0;
+    border: none;
+    font-size: 10pt;
+    float: left;
+    color: black;
+    padding-left: 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none; /* Rimuove l'outline quando l'input ha il focus */
+}
+input[type="search"]::-webkit-search-cancel-button {
+    display: none; /* Nasconde l'icona "x" di default */
+}
+.container-4 input#search::-webkit-input-placeholder {
+    color: #65737e;
+}
+.container-4 input#search:-moz-placeholder { /* Firefox 18- */
+    color: #65737e;  
+}
+.container-4 input#search::-moz-placeholder {  /* Firefox 19+ */
+    color: #65737e;  
+}
+.container-4 input#search:-ms-input-placeholder {  
+    color: #65737e;  
+}
+
+.container-4 button.icon{
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+    background: #F1F0F0;
+    height: 45px;
+    width: 50px;
+    color: #4f5b66;
+    opacity: 0;
+    font-size: 10pt;
+    -webkit-transition: all .55s ease;
+    -moz-transition: all .55s ease;
+    -ms-transition: all .55s ease;
+    -o-transition: all .55s ease;
+    transition: all .55s ease;
+}
+
+.container-4:hover button.icon, .container-4:active button.icon, .container-4:focus button.icon{
+    outline: none;
+    opacity: 1;
+    margin-left: -50px;
+}
+
+
+
+/* stile pulstante POST*/
+.submit-button {
+    background-color: transparent; /* Rende lo sfondo trasparente */
+    border: none; /* Nessun bordo */
+    color: #1DA1F2; /* Colore del testo celeste (colore Twitter) */
+    font-size: 16px; /* Dimensione del testo */
+    font-family: Arial, sans-serif; /* Carattere simile a Instagram */
+    padding: 0px; /* Spazio intorno al testo */
+    cursor: pointer; /* Cambia il cursore a forma di mano */
+    transition: all 0.3s ease; /* Transizione fluida per hover/focus */
+}
+
+.submit-button:hover {
+    opacity: 0.8; /* Leggera trasparenza al passaggio del mouse */
+}
+
+.submit-button:focus {
+    outline: none; /* Rimuove il contorno di focus */
+}
+
+.submit-button:active {
+    opacity: 0.6; /* Maggiore trasparenza quando il pulsante è premuto */
+}
+/*stile checkbox input */
+
+.checkbox-wrapper-53{
+    display: flex;
+    flex-direction: row;
+	gap: 1rem;
+}
+
+.nome_check{
+    margin-top: 0.3rem;
+}
+
+  .checkbox-wrapper-53 input[type="checkbox"] {
+    visibility: hidden;
+    display: none;
+  }
+
+  .checkbox-wrapper-53 .container_check {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+  }
+
+  .checkbox-wrapper-53 .checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 1.3em;
+    width: 1.3em;
+    background-color: #ccc;
+    border-radius: 100%;
+    background: #e8e8e8;
+    box-shadow: 3px 3px 5px #c5c5c5,
+                -3px -3px 5px #ffffff;
+  }
+
+  .checkbox-wrapper-53 .container_check input:checked ~ .checkmark {
+    box-shadow: inset 3px 3px 5px #c5c5c5,
+                inset -3px -3px 5px #ffffff;
+  }
+
+  .checkbox-wrapper-53 .checkmark:after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+  }
+
+  .checkbox-wrapper-53 .container_check input:checked ~ .checkmark:after {
+    opacity: 1;
+  }
+
+  .checkbox-wrapper-53 .container_check .checkmark:after {
+    left: 0.45em;
+    top: 0.25em;
+    width: 0.25em;
+    height: 0.5em;
+    border: solid darkgray;
+    border-width: 0 0.15em 0.15em 0;
+    transform: rotate(45deg);
+    transition: all 250ms;
+  }
+
+
+/* button header */
+
+.button-30 {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+  margin-right: 5rem;
+}
+
+.button-40{
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.button-30:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.button-40:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-40:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.button-40:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+}
+/*tendina header*/
+
+.logo {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    padding:  0.6rem 0.9rem;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5rem;
+    margin: 0;
+}
+
+.logo:hover .dropdown-content {
+    display: block;
+}
+
+/* stile stelle commento */
+.c4l-rating {
+    min-width: 120px;
+}
+
+.c4l-rating input[name^="c4l-rating"] { /* Cambia il selettore per abbracciare vari nomi */
+    display: none;
+}
+
+.c4l-rating input[name^="c4l-rating"] + label:after {
+    content: none;
+}
+
+.c4l-rating input[name^="c4l-rating"] + label {
+    font-family: 'FontAwesome';
+}
+
+.c4l-rating input[name^="c4l-rating"] + label:before {
+    background-color: transparent;
+    border: none;
+    color: #ffc107;
+    content: '\f005';
+    font-size: 1.33333333em;
+    transition: none;
+}
+
+.c4l-rating input[name^="c4l-rating"]:checked ~ label:before {
+    background-color: transparent;
+    border: none;
+    color: #607d8b;
+}
+
+.c4l-rating input[name^="c4l-rating"]:checked + label:before {
+    color: #ffc107;
+}
+
+.c4l-rating input[name^="c4l-rating"] + label:hover ~ input + label:before {
+    opacity: 0.6;
+}
